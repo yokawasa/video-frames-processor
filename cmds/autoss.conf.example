@@ -1,0 +1,35 @@
+[autoss]
+
+# Azure Computer Vision API endopoint
+azure_compvision_endpoint= https://eastus.api.cognitive.microsoft.com
+# Azure Computer Vision subscription key
+azure_compvision_subkey = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+# Word2Vec Model File Name (supposed to be placed under assets dir)
+word2vec_model_file = text8.model
+
+# Cosmos DB (vectors): endpoint
+cosmos_endpoint_vectors = https://COSMOSACCOUNTNAME.documents.azure.com:443/
+# Cosmos DB (vectors): key
+cosmos_primarykey_vectors = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+# Cosmos DB (vectors): db
+cosmos_db_vectors=tmpdb
+# Cosmos DB (vectors): col
+cosmos_col_vectors=vectors
+
+# Cosmos DB (rnninput): endpoint
+cosmos_endpoint_rnninput = https://COSMOSACCOUNTNAME.documents.azure.com:443/
+# Cosmos DB (rnninput): key
+cosmos_primarykey_rnninput = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+# Cosmos DB (rnninput): db
+cosmos_db_rnninput=tmpdb
+# Cosmos DB (rnninput): col
+cosmos_col_rnninput=rnninput
+  
+# log_file location
+log_file = /tmp/autoss.log
+
+# Default log level. Possible values: "CRITICAL", "ERROR", "WARNING", "INFO", "DEBUG".
+#log_level = INFO
+log_level = DEBUG

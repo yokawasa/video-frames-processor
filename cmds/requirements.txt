@@ -1,0 +1,5 @@
+gensim==3.6.0
+numpy==1.15.4
+configparser==3.5.0
+logger==1.4
+azure-cosmos==3.0.2
