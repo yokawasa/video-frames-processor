@@ -8,9 +8,6 @@ expr "$0" : "/.*" > /dev/null || cwd=`(cd "$cwd" && pwd)`
 
 FRAME_FATE=1    # unit: frame#/sec
 TIME_OFFSET=0   # unit: second
-STORAGE_ACCOUNT_NAME="autoss01"
-STORAGE_ACCOUNT_KEY="WM2/3r6mx+eK7w+73qucXBcngspxQCtGsXDdB3Fe9dl8HC+pferrXjZ1Km55Hd8gnv3JbOLhcXJs1M/s17TFxQ=="
-REMOTE_CONTAINER="upload"
 
 help() {
   echo "Usage: videoautoss <name> -c <camera#>"
@@ -43,11 +40,6 @@ process_video(){
   ffmpeg -i ${inputvideo} -ss $TIME_OFFSET -r ${FRAME_FATE} ${LOCAL_PATH}/${videoname}_${camerano}_%04d.jpg
 
   python processVideo.py -n ${videoname} -c ${camerano} -d ${LOCAL_PATH}
-  #blobxfer upload --storage-account ${STORAGE_ACCOUNT_NAME} \
-  #  --storage-account-key ${STORAGE_ACCOUNT_KEY} \
-  #  --remote-path ${REMOTE_CONTAINER} \
-  #  --local-path ${LOCAL_PATH} \
-  #  --recursive
 }
 
 cmd_main(){
